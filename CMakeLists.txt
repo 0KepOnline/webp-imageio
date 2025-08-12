@@ -1,4 +1,4 @@
-cmake_minimum_required( VERSION 2.8.12 )
+cmake_minimum_required( VERSION 3.31 )
 project ( webp-imageio )
 
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)

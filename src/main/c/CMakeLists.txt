@@ -12,7 +12,7 @@ add_library( webp-imageio SHARED ${JNI_OBJS} )
 include_directories( "${WEBP_HOME}/src" )
 target_link_libraries( webp-imageio webp )
 
-find_package ( JNI REQUIRED COMPONENTS Development )
+find_package ( JNI REQUIRED )
 include_directories( ${JNI_INCLUDE_DIRS} )
 
 if( NOT MSVC )
