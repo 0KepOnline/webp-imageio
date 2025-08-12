@@ -1,12 +1,8 @@
-![Travis build status](https://api.travis-ci.org/sejda-pdf/webp-imageio.svg?branch=master)
-
 # Forked repository
-This is a fork from [luciad/webp-imageio](https://bitbucket.org/luciad/webp-imageio/)
+This is a fork from [sejda-pdf/webp-imageio](https://github.com/sejda-pdf/webp-imageio).
 
 # Changes
-- Native libs are bundled in the jar
-- Published to Maven Central (`org.sejda.imageio`:`webp-imageio` artifact)
-- Android support unknown (have not tested)
+- Updated `libwebp` to 1.6.0
 
 # Supported platforms
 - windows (32, 64 bit)
@@ -23,7 +19,7 @@ This is a fork from [luciad/webp-imageio](https://bitbucket.org/luciad/webp-imag
 webp-imageio is distributed under the [Apache Software License](https://www.apache.org/licenses/LICENSE-2.0) version 2.0.
 
 # Usage
-- Add Maven dependency `org.sejda.imageio`:`webp-imageio` to your application
+- Add Maven dependency `net.scenariopla.imageio:webp-imageio` to your application
 - The WebP reader and writer can be used like any other Image I/O reader and writer.
 
 ## Decoding
@@ -89,9 +85,9 @@ writer.write(null, new IIOImage(image, null, null), writeParam);
 # Compiling
 
 ## Compiling the native library for Java SE
-- Install CMake 2.8 or newer. CMake can be downloaded from www.cmake.org or installed using
+- Install CMake 3.31 or newer. CMake can be downloaded from www.cmake.org or installed using
   your systems package manager.
-- Install VS 2017 Community and make sure the C++/Cmake dev tools modules are installed
+- Install VS 2022 Community and make sure the C++/Cmake dev tools modules are installed
 - Create a directory called `build` in the root of the project
 - Open a terminal and navigate to the newly created 'build' directory
 - Run `cmake ..` in the 'build' directory to generate the build scripts for your system.
@@ -100,7 +96,7 @@ On Windows 64 bit run `cmake -DCMAKE_GENERATOR_PLATFORM=x64 ..` to get a 64 bit 
 - The compiled library can be found under the directory `build/src/main/c`
 - Copy the compiled library to `src/main/resources/native/$platform/$bits`
 
-## Compiling the native library for Android
+## Compiling the native library for Android (not tested yet)
 - Install the Android NDK.
 - Run ndk-build in the `src/android` directory
 - After completion `libwebp-imageio.so` can be found under `src/android/libs/<abi>`

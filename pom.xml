@@ -1,24 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>org.sejda.imageio</groupId>
+    <groupId>net.scenariopla.imageio</groupId>
     <artifactId>webp-imageio</artifactId>
     <packaging>jar</packaging>
     <name>webp-imageio</name>
-    <version>0.1.7-SNAPSHOT</version>
+    <version>0.1.8</version>
 
     <issueManagement>
         <system>GitHub</system>
-        <url>https://github.com/sejda-pdf/webp-imageio/issues</url>
+        <url>https://github.com/0KepOnline/webp-imageio/issues</url>
     </issueManagement>
 
     <description>webp support for ImageIO</description>
-    <url>https://github.com/sejda-pdf/webp-imageio</url>
-
-    <organization>
-        <name>sejda.com</name>
-        <url>http://www.sejda.com</url>
-    </organization>
+    <url>https://github.com/0KepOnline/webp-imageio</url>
 
     <licenses>
         <license>
@@ -30,17 +25,26 @@
     </licenses>
 
     <scm>
-        <connection>scm:git:git@github.com:sejda-pdf/webp-imageio.git</connection>
-        <developerConnection>scm:git:git@github.com:sejda-pdf/webp-imageio.git</developerConnection>
-        <url>scm:git:git@github.com:sejda-pdf/webp-imageio.git</url>
+        <connection>scm:git:git@github.com:0KepOnline/webp-imageio.git</connection>
+        <developerConnection>scm:git:git@github.com:0KepOnline/webp-imageio.git</developerConnection>
+        <url>scm:git:git@github.com:0KepOnline/webp-imageio.git</url>
         <tag>HEAD</tag>
     </scm>
 
     <developers>
-        <developer>
+        <developer> <!-- sejda-pdf/webp-imageio -->
             <id>ediweissmann</id>
             <name>Edi Weissmann</name>
             <email>edi.weissmann@gmail.com</email>
+        </developer>
+		
+        <developer>
+            <id>scenarioplanet</id>
+            <name>0KepOnline / ScenarioPlanet</name>
+			<url>https://scenariopla.net</url>
+			<properties>
+				<picUrl>https://scenariopla.net/avatar_bongocat.png</picUrl>
+			</properties>
         </developer>
     </developers>
 
@@ -56,7 +60,7 @@
         </snapshotRepository>
         <repository>
             <id>ossrh</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            <url>https://ossrh-staging-api.central.sonatype.com/service/local/staging/deploy/maven2/</url>
         </repository>
     </distributionManagement>
 
@@ -146,7 +150,7 @@
                         <extensions>true</extensions>
                         <configuration>
                             <serverId>ossrh</serverId>
-                            <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                            <nexusUrl>https://ossrh-staging-api.central.sonatype.com/</nexusUrl>
                             <autoReleaseAfterClose>true</autoReleaseAfterClose>
                         </configuration>
                     </plugin>
